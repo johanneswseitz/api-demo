@@ -25,7 +25,7 @@ from fleetmanagement.models import Auto
 class AutoSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Auto
-        fields = ["hersteller", "modell", "nummernschild", "status"]
+        fields = ["id", "hersteller", "modell", "nummernschild", "status"]
 
 # ViewSets define the view behavior.
 class AutoViewSet(viewsets.ModelViewSet):
