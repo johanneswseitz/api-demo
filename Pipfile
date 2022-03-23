@@ -4,7 +4,6 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-django-rest = "*"
 drf-yasg = "*"
 
 [dev-packages]
