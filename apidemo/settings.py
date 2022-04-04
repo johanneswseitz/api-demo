@@ -139,4 +139,7 @@ SPECTACULAR_SETTINGS = {
     'DESCRIPTION': "API um das Flottenmanagement zu automatisieren",
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
+    "SWAGGER_UI_SETTINGS": {
+        "tryItOutEnabled": True,
+    }
 }
