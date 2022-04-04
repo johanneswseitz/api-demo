@@ -4,7 +4,11 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-drf-yasg = "*"
+django = "*"
+django-filter = "*"
+gunicorn = "*"
+drf-spectacular = "*"
+faker-vehicle = "*"
 
 [dev-packages]
 
