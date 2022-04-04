@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, re_path, include
 from rest_framework import permissions
+from rest_framework import filters
+from django_filters.rest_framework import DjangoFilterBackend
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from rest_framework import routers, serializers, viewsets
@@ -31,6 +33,9 @@ class AutoSerializer(serializers.HyperlinkedModelSerializer):
 class AutoViewSet(viewsets.ModelViewSet):
     queryset = Auto.objects.all()
     serializer_class = AutoSerializer
+    filter_backends = [DjangoFilterBackend, filters.SearchFilter]
+    filterset_fields = ["hersteller", "modell", "nummernschild", "status"]
+    search_fields = ["hersteller", "modell", "nummernschild"]
 
 # Routers provide an easy way of automatically determining the URL conf.
 router = routers.DefaultRouter()

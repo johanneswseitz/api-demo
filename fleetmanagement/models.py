@@ -22,4 +22,8 @@ class Auto(models.Model):
 
 if len(Auto.objects.all()) == 0:
     print("DATABASE IS EMPTY; GENERATING FAKE ENTRIES")
-    Auto(hersteller="Tesla", modell="Model 3", nummernschild="", status=STATUSES[0][0]).save()
+    Auto(hersteller="Tesla", modell="Model S", nummernschild="ME-MS-12", status=STATUSES[3][0]).save()
+    Auto(hersteller="Tesla", modell="Model 3", nummernschild="ME-ME-63", status=STATUSES[3][0]).save()
+    Auto(hersteller="Tesla", modell="Model X", nummernschild="ME-MX-08", status=STATUSES[2][0]).save()
+    Auto(hersteller="Tesla", modell="Model Y", nummernschild="", status=STATUSES[0][0]).save()
+    Auto(hersteller="Volkswagen", modell="ID.3", nummernschild="", status=STATUSES[0][0]).save()
