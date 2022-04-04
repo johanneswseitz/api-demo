@@ -31,6 +31,7 @@ class AutoSerializer(serializers.HyperlinkedModelSerializer):
 class AutoViewSet(viewsets.ModelViewSet):
     queryset = Auto.objects.all()
     serializer_class = AutoSerializer
+    filterset_fields = ["hersteller", "modell", "nummernschild", "status"]
 
 # Routers provide an easy way of automatically determining the URL conf.
 router = routers.DefaultRouter()
