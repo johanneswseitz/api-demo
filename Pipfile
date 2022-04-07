@@ -9,6 +9,7 @@ django-filter = "*"
 gunicorn = "*"
 drf-spectacular = "*"
 faker-vehicle = "*"
+django-heroku = "*"
 
 [dev-packages]
 

@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-7vp8#v)-&2@5o6f=r(&=h8xxt82x1jconki-f2u(38-jw9a)+7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -123,6 +123,7 @@ STATIC_URL = 'static/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
@@ -143,3 +144,10 @@ SPECTACULAR_SETTINGS = {
         "tryItOutEnabled": True,
     }
 }
+
+try:
+   import local_settings
+except:
+   import django_heroku
+   django_heroku.settings(locals())
+
