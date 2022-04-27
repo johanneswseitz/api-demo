@@ -107,6 +107,17 @@ class AutoViewSet(viewsets.ModelViewSet):
     def destroy(self, request, *args, **kwargs):
         return super().destroy(request, *args, **kwargs)
 
+    def get_object(self):
+        if self.request.method == 'PUT':
+            resource = Auto.objects.filter(id=self.kwargs.get('pk')).first()
+            if resource:
+                return resource
+            else:
+                return Auto(id=self.kwargs.get('pk'))
+        else:
+            return super(AutoViewSet, self).get_object()
+
+
 
 
 
