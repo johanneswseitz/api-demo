@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django_filters'
 ]
 
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -48,7 +49,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'fleetmanagement.middleware.cors.CustomCorsMiddleware'
 ]
+
+
 
 ROOT_URLCONF = 'apidemo.urls'
 
