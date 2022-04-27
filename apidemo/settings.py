@@ -140,7 +140,7 @@ SPECTACULAR_SETTINGS = {
 }
 
 try:
-    import local_settings
+    from .local_settings import *
 except:
     import django_heroku
     django_heroku.settings(locals())
